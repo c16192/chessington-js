@@ -18,10 +18,13 @@ var Pawn = /** @class */ (function (_super) {
     }
     Pawn.prototype.getAvailableMoves = function (board) {
         var currentSquare = board.findPiece(this);
+        var moves;
         if (this.player == Player.WHITE) {
-            [Square.at(currentSquare.row + 1, currentSquare.col)];
+            moves = [Square.at(currentSquare.row + 1, currentSquare.col)];
         }
-        var moves = [Square.at(1, 0)];
+        if (this.player == Player.BLACK) {
+            moves = [Square.at(currentSquare.row - 1, currentSquare.col)];
+        }
         return moves;
     };
     return Pawn;

@@ -10,10 +10,13 @@ export default class Pawn extends Piece {
 
     public getAvailableMoves(board: Board) {
         const currentSquare = board.findPiece(this);
+        let moves: Square[];
         if(this.player == Player.WHITE){
-            [Square.at(currentSquare.row + 1, currentSquare.col)]
+            moves = [Square.at(currentSquare.row + 1, currentSquare.col)]
         }
-        const moves: Square[] = [Square.at(1, 0)];
+        if(this.player == Player.BLACK){
+            moves = [Square.at(currentSquare.row - 1, currentSquare.col)]
+        }
         return moves;
     }
 }

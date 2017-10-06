@@ -1,9 +1,16 @@
 import Player from './player';
 import GameSettings from './gameSettings';
 import Square from './square';
+<<<<<<< HEAD
 var Board = /** @class */ (function () {
     function Board() {
         this.currentPlayer = Player.WHITE;
+=======
+
+export default class Board {
+    constructor(currentPlayer) {
+        this.currentPlayer = currentPlayer ? currentPlayer : Player.WHITE;
+>>>>>>> 716fede... Add a test for pawns moving two spaces initially
         this.board = this.createBoard();
     }
     Board.prototype.createBoard = function () {
