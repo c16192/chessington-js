@@ -1,6 +1,7 @@
 import Player from './player';
 import GameSettings from './gameSettings';
 import Square from './square';
+
 var Board = /** @class */ (function () {
     function Board() {
         this.currentPlayer = Player.WHITE;
