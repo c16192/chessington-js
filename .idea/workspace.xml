@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d674a4b9-9a84-41eb-b90a-9f2781615ad7" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/engine/pieces/pawn.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/engine/pieces/pawn.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/engine/pieces/pawn.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/engine/pieces/pawn.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/engine/pieces/pawn.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/engine/pieces/pawn.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/engine/pieces/rook.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/engine/pieces/rook.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/engine/pieces/rook.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/engine/pieces/rook.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/engine/board.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/engine/board.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -32,8 +28,8 @@
       <file leaf-file-name="rook.ts" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/engine/pieces/rook.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="44" lean-forward="true" selection-start-line="9" selection-start-column="44" selection-end-line="10" selection-end-column="28" />
+            <state relative-caret-position="221">
+              <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
               </folding>
@@ -98,8 +94,8 @@
       <file leaf-file-name="pawn.spec.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tests/engine/pieces/pawn.spec.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="343">
-              <caret line="26" column="11" selection-start-line="26" selection-start-column="11" selection-end-line="26" selection-end-column="11" />
+            <state relative-caret-position="598">
+              <caret line="41" column="11" selection-start-line="41" selection-start-column="11" selection-end-line="41" selection-end-column="11" />
               <folding>
                 <element signature="e#0#30#0" expanded="true" />
               </folding>
@@ -336,7 +332,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1530026188193</updated>
-      <workItem from="1530026189777" duration="4719000" />
+      <workItem from="1530026189777" duration="5014000" />
     </task>
     <servers />
   </component>
@@ -367,11 +363,10 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4719000" />
+    <option name="totallyTimeSpent" value="5014000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1176" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -383,12 +378,12 @@
       <window_info anchor="right" id="Maven Projects" />
       <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32851636" />
-      <window_info anchor="bottom" id="Terminal" weight="0.19942197" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32851636" />
+      <window_info active="true" anchor="bottom" id="Terminal" visible="true" weight="0.19942197" />
       <window_info id="Capture Tool" order="1" />
       <window_info anchor="bottom" id="TypeScript" />
       <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="6" visible="true" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="6" visible="true" weight="0.25" />
       <window_info anchor="right" id="Database" />
       <window_info id="Structure" order="5" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -652,8 +647,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/engine/pieces/pawn.spec.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="343">
-          <caret line="26" column="11" selection-start-line="26" selection-start-column="11" selection-end-line="26" selection-end-column="11" />
+        <state relative-caret-position="598">
+          <caret line="41" column="11" selection-start-line="41" selection-start-column="11" selection-end-line="41" selection-end-column="11" />
           <folding>
             <element signature="e#0#30#0" expanded="true" />
           </folding>
@@ -672,8 +667,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/engine/pieces/rook.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="44" lean-forward="true" selection-start-line="9" selection-start-column="44" selection-end-line="10" selection-end-column="28" />
+        <state relative-caret-position="221">
+          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
           </folding>
