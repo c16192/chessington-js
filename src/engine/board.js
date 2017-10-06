@@ -1,10 +1,9 @@
 import Player from './player';
 import GameSettings from './gameSettings';
 import Square from './square';
-
-export default class Board {
-    constructor(currentPlayer) {
-        this.currentPlayer = currentPlayer ? currentPlayer : Player.WHITE;
+var Board = /** @class */ (function () {
+    function Board() {
+        this.currentPlayer = Player.WHITE;
         this.board = this.createBoard();
     }
     Board.prototype.createBoard = function () {
