@@ -18,8 +18,8 @@
       <file leaf-file-name="pawn.ts" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/engine/pieces/pawn.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+            <state relative-caret-position="238">
+              <caret line="14" column="9" lean-forward="true" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="9" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
               </folding>
@@ -143,8 +143,8 @@
         <option value="$PROJECT_DIR$/src/engine/pieces/queen.ts" />
         <option value="$PROJECT_DIR$/src/engine/pieces/rook.ts" />
         <option value="$PROJECT_DIR$/tests/engine/pieces/pawn.spec.js" />
-        <option value="$PROJECT_DIR$/src/engine/pieces/pawn.ts" />
         <option value="$PROJECT_DIR$/src/engine/player.ts" />
+        <option value="$PROJECT_DIR$/src/engine/pieces/pawn.ts" />
       </list>
     </option>
   </component>
@@ -322,7 +322,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1530026188193</updated>
-      <workItem from="1530026189777" duration="4447000" />
+      <workItem from="1530026189777" duration="4519000" />
     </task>
     <servers />
   </component>
@@ -350,7 +350,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4447000" />
+    <option name="totallyTimeSpent" value="4519000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1176" extended-state="6" />
@@ -366,12 +366,12 @@
       <window_info anchor="right" id="Maven Projects" />
       <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32851636" />
-      <window_info anchor="bottom" id="Terminal" weight="0.19942197" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32851636" />
+      <window_info active="true" anchor="bottom" id="Terminal" visible="true" weight="0.19942197" />
       <window_info id="Capture Tool" order="1" />
       <window_info anchor="bottom" id="TypeScript" />
       <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="6" visible="true" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="6" visible="true" weight="0.25" />
       <window_info anchor="right" id="Database" />
       <window_info id="Structure" order="5" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -655,8 +655,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/engine/pieces/pawn.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+        <state relative-caret-position="238">
+          <caret line="14" column="9" lean-forward="true" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="9" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
           </folding>

@@ -9,6 +9,7 @@ var __extends = (this && this.__extends) || (function () {
     };
 })();
 import Piece from './piece';
+import { default as Player } from "../player";
 import Square from "../square";
 var Pawn = /** @class */ (function (_super) {
     __extends(Pawn, _super);
@@ -17,7 +18,7 @@ var Pawn = /** @class */ (function (_super) {
     }
     Pawn.prototype.getAvailableMoves = function (board) {
         var currentSquare = board.findPiece(this);
-        if (this.player == 'white') {
+        if (this.player == Player.WHITE) {
             [Square.at(currentSquare.row + 1, currentSquare.col)];
         }
         var moves = [Square.at(1, 0)];

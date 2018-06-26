@@ -1,6 +1,6 @@
 import Piece from './piece';
 import Board from "../board";
-import {PlayerType} from "../player";
+import {default as Player, PlayerType} from "../player";
 import Square from "../square";
 
 export default class Pawn extends Piece {
@@ -10,7 +10,7 @@ export default class Pawn extends Piece {
 
     public getAvailableMoves(board: Board) {
         const currentSquare = board.findPiece(this);
-        if(this.player == 'white'){
+        if(this.player == Player.WHITE){
             [Square.at(currentSquare.row + 1, currentSquare.col)]
         }
         const moves: Square[] = [Square.at(1, 0)];
