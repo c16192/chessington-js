@@ -1,18 +1,18 @@
-export default class Square {
-    constructor(row, col) {
+var Square = /** @class */ (function () {
+    function Square(row, col) {
         this.row = row;
         this.col = col;
     }
-
-    static at(row, col) {
+    Square.at = function (row, col) {
         return new Square(row, col);
-    }
-
-    equals(otherSquare) {
+    };
+    Square.prototype.equals = function (otherSquare) {
         return !!otherSquare && this.row === otherSquare.row && this.col === otherSquare.col;
-    }
-
-    toString() {
-        return `Row ${this.row}, Col ${this.col}`;
-    }
-}
+    };
+    Square.prototype.toString = function () {
+        return "Row " + this.row + ", Col " + this.col;
+    };
+    return Square;
+}());
+export default Square;
+//# sourceMappingURL=square.js.map

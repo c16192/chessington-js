@@ -1,11 +1,23 @@
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
 import Piece from './piece';
-
-export default class Knight extends Piece {
-    constructor(player) {
-        super(player);
+var Knight = /** @class */ (function (_super) {
+    __extends(Knight, _super);
+    function Knight(player) {
+        return _super.call(this, player) || this;
     }
-
-    getAvailableMoves(board) {
+    Knight.prototype.getAvailableMoves = function (board) {
         return new Array(0);
-    }
-}
+    };
+    return Knight;
+}(Piece));
+export default Knight;
+//# sourceMappingURL=knight.js.map

@@ -60,3 +60,4 @@ typings/
 # Babel build Output
 dist/
 
+.idea/
