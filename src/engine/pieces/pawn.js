@@ -9,13 +9,19 @@ var __extends = (this && this.__extends) || (function () {
     };
 })();
 import Piece from './piece';
+import Square from "../square";
 var Pawn = /** @class */ (function (_super) {
     __extends(Pawn, _super);
     function Pawn(player) {
         return _super.call(this, player) || this;
     }
     Pawn.prototype.getAvailableMoves = function (board) {
-        return new Array(0);
+        var currentSquare = board.findPiece(this);
+        if (this.player == 'white') {
+            [Square.at(currentSquare.row + 1, currentSquare.col)];
+        }
+        var moves = [Square.at(1, 0)];
+        return moves;
     };
     return Pawn;
 }(Piece));
