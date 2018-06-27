@@ -9,13 +9,27 @@ var __extends = (this && this.__extends) || (function () {
     };
 })();
 import Piece from './piece';
+import Move from "../move";
+import Moves from "../moves";
 var Knight = /** @class */ (function (_super) {
     __extends(Knight, _super);
     function Knight(player) {
         return _super.call(this, player) || this;
     }
     Knight.prototype.getAvailableMoves = function (board) {
-        return new Array(0);
+        var currentSquare = board.findPiece(this);
+        var movePatterns = [];
+        movePatterns.push(new Move(1, 2));
+        movePatterns.push(new Move(2, 1));
+        movePatterns.push(new Move(-1, 2));
+        movePatterns.push(new Move(-2, 1));
+        movePatterns.push(new Move(1, -2));
+        movePatterns.push(new Move(2, -1));
+        movePatterns.push(new Move(-1, -2));
+        movePatterns.push(new Move(-2, -1));
+        var moves = Moves.getMoves(board, this, currentSquare, movePatterns);
+        console.log(moves);
+        return moves;
     };
     return Knight;
 }(Piece));
