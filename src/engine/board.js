@@ -11,6 +11,9 @@ export default class Board {
     constructor(currentPlayer) {
         this.currentPlayer = currentPlayer ? currentPlayer : Player.WHITE;
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 716fede... Add a test for pawns moving two spaces initially
+=======
 >>>>>>> 716fede... Add a test for pawns moving two spaces initially
 =======
 >>>>>>> 716fede... Add a test for pawns moving two spaces initially
