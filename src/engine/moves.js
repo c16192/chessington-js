@@ -23,48 +23,28 @@ var Moves = /** @class */ (function () {
         return moves;
     };
     Moves.existPieceOnMoveRoute = function (board, currentSquare, nextSquare) {
-        if (currentSquare.row == nextSquare.row) {
-            if (currentSquare.col < nextSquare.col) {
-                for (var col = currentSquare.col + 1; col <= nextSquare.col; col++) {
-                    if (board.getPiece(Square.at(currentSquare.row, col)) != undefined) {
-                        return true;
-                    }
+        if (board.getPiece(nextSquare) != undefined) {
+            return true;
+        }
+        var currRow = currentSquare.row;
+        var currCol = currentSquare.col;
+        var nextRow = nextSquare.row;
+        var nextCol = nextSquare.col;
+        if (currRow == nextRow) {
+            for (var col = Math.min(currCol, nextCol) + 1; col < Math.max(currCol, nextCol); col++) {
+                if (board.getPiece(Square.at(currRow, col)) != undefined) {
+                    return true;
                 }
-            }
-            else if (currentSquare.col > nextSquare.col) {
-                for (var col = currentSquare.col - 1; col >= nextSquare.col; col--) {
-                    if (board.getPiece(Square.at(currentSquare.row, col)) != undefined) {
-                        return true;
-                    }
-                }
-            }
-            else {
-                console.log(currentSquare);
-                console.log(nextSquare);
-                throw "Cannot move to the same square";
             }
         }
-        if (currentSquare.col == nextSquare.col) {
-            if (currentSquare.row < nextSquare.row) {
-                for (var row = currentSquare.row + 1; row <= nextSquare.row; row++) {
-                    if (board.getPiece(Square.at(row, currentSquare.col)) != undefined) {
-                        return true;
-                    }
+        if (currCol == nextCol) {
+            for (var row = Math.min(currRow, nextRow) + 1; row < Math.max(currRow, nextRow); row++) {
+                if (board.getPiece(Square.at(row, currCol)) != undefined) {
+                    return true;
                 }
-            }
-            else if (currentSquare.row > nextSquare.row) {
-                for (var row = currentSquare.row - 1; row >= nextSquare.row; row--) {
-                    if (board.getPiece(Square.at(row, currentSquare.col)) != undefined) {
-                        return true;
-                    }
-                }
-            }
-            else {
-                console.log(currentSquare);
-                console.log(nextSquare);
-                throw "Cannot move to the same square";
             }
         }
+        return false;
     };
     return Moves;
 }());
