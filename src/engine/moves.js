@@ -1,5 +1,6 @@
 import Square from "./square";
 import { default as Player } from "./player";
+import King from "./pieces/king";
 var Moves = /** @class */ (function () {
     function Moves() {
     }
@@ -25,7 +26,7 @@ var Moves = /** @class */ (function () {
     Moves.existPieceOnMoveRoute = function (board, piece, currentSquare, nextSquare) {
         var pieceOnNextSquare = board.getPiece(nextSquare);
         if (pieceOnNextSquare != undefined) {
-            if (pieceOnNextSquare.player == piece.player) {
+            if (this.illegalMove(piece, pieceOnNextSquare)) {
                 return true;
             }
         }
@@ -61,6 +62,15 @@ var Moves = /** @class */ (function () {
                     }
                 }
             }
+        }
+        return false;
+    };
+    Moves.illegalMove = function (piece, pieceOnNextSquare) {
+        if (pieceOnNextSquare.player == piece.player) {
+            return true;
+        }
+        if (pieceOnNextSquare instanceof King) {
+            return true;
         }
         return false;
     };

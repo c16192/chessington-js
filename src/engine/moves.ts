@@ -3,6 +3,7 @@ import {default as Player} from "./player";
 import Move from "./move";
 import Board from "./board";
 import Piece from "./pieces/piece";
+import King from "./pieces/king";
 
 export default class Moves {
     public static getMoves(board: Board, piece: Piece, currentSquare: Square, movePatterns: Move[]) {
@@ -27,7 +28,7 @@ export default class Moves {
     public static existPieceOnMoveRoute(board: Board, piece: Piece, currentSquare: Square, nextSquare: Square){
         const pieceOnNextSquare = board.getPiece(nextSquare);
         if (pieceOnNextSquare != undefined) {
-            if(pieceOnNextSquare.player == piece.player) {
+            if(this.illegalMove(piece, pieceOnNextSquare)) {
                 return true;
             }
         }
@@ -63,6 +64,16 @@ export default class Moves {
                     }
                 }
             }
+        }
+        return false;
+    }
+
+    private static illegalMove(piece:Piece, pieceOnNextSquare: Piece): boolean{
+        if(pieceOnNextSquare.player == piece.player){
+            return true;
+        }
+        if(pieceOnNextSquare instanceof King){
+            return true;
         }
         return false;
     }
