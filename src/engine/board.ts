@@ -43,7 +43,6 @@ export default class Board {
     }
 
     public movePiece(fromSquare: Square, toSquare: Square): void {
-        console.log("HERE")
         const movingPiece = this.getPiece(fromSquare);
         if (!!movingPiece && movingPiece.player === this.currentPlayer) {
             this.setPiece(toSquare, movingPiece);

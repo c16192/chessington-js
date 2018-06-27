@@ -3,6 +3,8 @@ import Board from "../board";
 import {default as Player, PlayerType} from "../player";
 import Square from "../square";
 import Move from "../move";
+import GameSettings from "../gameSettings";
+import Moves from "../moves";
 
 export default class Pawn extends Piece {
     constructor(public player: PlayerType) {
@@ -13,10 +15,12 @@ export default class Pawn extends Piece {
 
     public getAvailableMoves(board: Board): Square[] {
         const currentSquare = board.findPiece(this);
-        let moves: Square[] = [this.getMove(board, currentSquare, new Move(1,0))];
+        let movePatterns: Move[] = [new Move(1,0)];
         if(!this.hasMoved) {
-            moves.push(this.getMove(board, currentSquare, new Move(2,0)));
+            movePatterns.push(new Move(2,0));
         }
+        const moves = Moves.getMoves(board, this, currentSquare, movePatterns);
+        console.log(moves)
         return moves;
     }
 

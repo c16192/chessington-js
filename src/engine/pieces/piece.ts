@@ -14,16 +14,4 @@ export default class Piece {
         const currentSquare = board.findPiece(this);
         board.movePiece(currentSquare, newSquare);
     }
-
-    public getMove(board: Board, currentSquare: Square, movePattern: Move) {
-        let moveTo: Square;
-        if(this.player == Player.WHITE){
-            moveTo = Square.relative(movePattern.row, movePattern.col,currentSquare)
-        }
-        if(this.player == Player.BLACK){
-            moveTo = Square.relative(-movePattern.row,-movePattern.col,currentSquare)
-        }
-        return moveTo;
-    }
-
 }
