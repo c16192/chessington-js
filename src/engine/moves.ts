@@ -58,29 +58,31 @@ export default class Moves {
             const currCol = currentSquare.col;
             const nextRow = nextSquare.row;
             const nextCol = nextSquare.col;
-            const diagonal = Math.abs(currRow - nextRow);
-            for (let rowOffset = 1; rowOffset < diagonal; rowOffset++) {
-                for (let colOffset = 1; colOffset < diagonal; colOffset++) {
+            if(currRow != nextRow && currCol != nextCol{
+                const diagonal = Math.abs(currRow - nextRow);
+                for (let offset = 1; offset < diagonal; offset++) {
                     let row = currRow;
                     let col = currCol;
                     if (currRow < nextRow) {
-                        row += rowOffset;
+                        row += offset;
                     } else {
-                        row -= rowOffset;
+                        row -= offset;
                     }
                     if (currCol < nextCol) {
-                        col += colOffset;
+                        col += offset;
                     } else {
-                        col -= colOffset;
+                        col -= offset;
                     }
+                    console.log("Curr: " + currentSquare)
+                    console.log("Next: " + nextSquare)
+                    console.log(row + ", " + col)
                     if (board.getPiece(Square.at(row, col)) != undefined) {
                         return true;
                     }
                 }
             }
-
-            return false;
         }
+        return false;
     }
 
     private static illegalMove(piece:Piece, pieceOnNextSquare: Piece): boolean{

@@ -55,30 +55,33 @@ var Moves = /** @class */ (function () {
             var currCol = currentSquare.col;
             var nextRow = nextSquare.row;
             var nextCol = nextSquare.col;
-            var diagonal = Math.abs(currRow - nextRow);
-            for (var rowOffset = 1; rowOffset < diagonal; rowOffset++) {
-                for (var colOffset = 1; colOffset < diagonal; colOffset++) {
+            if (currRow != nextRow && currCol != nextCol) {
+                var diagonal = Math.abs(currRow - nextRow);
+                for (var offset = 1; offset < diagonal; offset++) {
                     var row = currRow;
                     var col = currCol;
                     if (currRow < nextRow) {
-                        row += rowOffset;
+                        row += offset;
                     }
                     else {
-                        row -= rowOffset;
+                        row -= offset;
                     }
                     if (currCol < nextCol) {
-                        col += colOffset;
+                        col += offset;
                     }
                     else {
-                        col -= colOffset;
+                        col -= offset;
                     }
+                    console.log("Curr: " + currentSquare);
+                    console.log("Next: " + nextSquare);
+                    console.log(row + ", " + col);
                     if (board.getPiece(Square.at(row, col)) != undefined) {
                         return true;
                     }
                 }
             }
-            return false;
         }
+        return false;
     };
     Moves.illegalMove = function (piece, pieceOnNextSquare) {
         if (pieceOnNextSquare.player == piece.player) {
