@@ -72,9 +72,6 @@ var Moves = /** @class */ (function () {
                     else {
                         col -= offset;
                     }
-                    console.log("Curr: " + currentSquare);
-                    console.log("Next: " + nextSquare);
-                    console.log(row + ", " + col);
                     if (board.getPiece(Square.at(row, col)) != undefined) {
                         return true;
                     }

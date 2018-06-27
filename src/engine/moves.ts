@@ -58,7 +58,7 @@ export default class Moves {
             const currCol = currentSquare.col;
             const nextRow = nextSquare.row;
             const nextCol = nextSquare.col;
-            if(currRow != nextRow && currCol != nextCol{
+            if(currRow != nextRow && currCol != nextCol){
                 const diagonal = Math.abs(currRow - nextRow);
                 for (let offset = 1; offset < diagonal; offset++) {
                     let row = currRow;
@@ -73,9 +73,6 @@ export default class Moves {
                     } else {
                         col -= offset;
                     }
-                    console.log("Curr: " + currentSquare)
-                    console.log("Next: " + nextSquare)
-                    console.log(row + ", " + col)
                     if (board.getPiece(Square.at(row, col)) != undefined) {
                         return true;
                     }
