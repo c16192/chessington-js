@@ -9,23 +9,26 @@ var __extends = (this && this.__extends) || (function () {
     };
 })();
 import Piece from './piece';
-import { default as Player } from "../player";
-import Square from "../square";
+import Move from "../move";
 var Pawn = /** @class */ (function (_super) {
     __extends(Pawn, _super);
     function Pawn(player) {
-        return _super.call(this, player) || this;
+        var _this = _super.call(this, player) || this;
+        _this.player = player;
+        _this.hasMoved = false;
+        return _this;
     }
     Pawn.prototype.getAvailableMoves = function (board) {
         var currentSquare = board.findPiece(this);
-        var moves;
-        if (this.player == Player.WHITE) {
-            moves = [Square.at(currentSquare.row + 1, currentSquare.col)];
-        }
-        if (this.player == Player.BLACK) {
-            moves = [Square.at(currentSquare.row - 1, currentSquare.col)];
+        var moves = [this.getMove(board, currentSquare, new Move(1, 0))];
+        if (!this.hasMoved) {
+            moves.push(this.getMove(board, currentSquare, new Move(2, 0)));
         }
         return moves;
+    };
+    Pawn.prototype.moveTo = function (board, newSquare) {
+        _super.prototype.moveTo.call(this, board, newSquare);
+        this.hasMoved = true;
     };
     return Pawn;
 }(Piece));

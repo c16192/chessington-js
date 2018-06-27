@@ -2,9 +2,12 @@ import Player from './player';
 import GameSettings from './gameSettings';
 import Square from './square';
 var Board = /** @class */ (function () {
-    function Board() {
+    function Board(player) {
         this.currentPlayer = Player.WHITE;
         this.board = this.createBoard();
+        if (player != undefined) {
+            this.currentPlayer = player;
+        }
     }
     Board.prototype.createBoard = function () {
         var board = new Array(GameSettings.BOARD_SIZE);
