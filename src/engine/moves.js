@@ -23,8 +23,11 @@ var Moves = /** @class */ (function () {
         return moves;
     };
     Moves.existPieceOnMoveRoute = function (board, piece, currentSquare, nextSquare) {
-        if (board.getPiece(nextSquare) != undefined) {
-            return true;
+        var pieceOnNextSquare = board.getPiece(nextSquare);
+        if (pieceOnNextSquare != undefined) {
+            if (pieceOnNextSquare.player == piece.player) {
+                return true;
+            }
         }
         if (piece.route.cross) {
             var currRow = currentSquare.row;

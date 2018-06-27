@@ -25,8 +25,11 @@ export default class Moves {
     }
 
     public static existPieceOnMoveRoute(board: Board, piece: Piece, currentSquare: Square, nextSquare: Square){
-        if(board.getPiece(nextSquare) != undefined){
-            return true;
+        const pieceOnNextSquare = board.getPiece(nextSquare);
+        if (pieceOnNextSquare != undefined) {
+            if(pieceOnNextSquare.player == piece.player) {
+                return true;
+            }
         }
         if(piece.route.cross){
             const currRow = currentSquare.row;
