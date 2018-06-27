@@ -69,7 +69,7 @@ describe('Rook', () => {
         moves.should.deep.include(Square.at(4, 6));
     });
 
-    xit('cannot take the opposing king', () => {
+    it('cannot take the opposing king', () => {
         const rook = new Rook(Player.WHITE);
         const opposingKing = new King(Player.BLACK);
         board.setPiece(Square.at(4, 4), rook);
