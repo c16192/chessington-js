@@ -53,20 +53,34 @@ export default class Moves {
                 }
             }
         }
-        if(piece.route.diagonal){
+        if(piece.route.diagonal) {
             const currRow = currentSquare.row;
             const currCol = currentSquare.col;
             const nextRow = nextSquare.row;
             const nextCol = nextSquare.col;
-            for(let row = Math.min(currRow, nextRow) + 1; row < Math.max(currRow, nextRow); row++){
-                for(let col = Math.min(currCol, nextCol) + 1; col < Math.max(currCol, nextCol); col++){
-                    if(board.getPiece(Square.at(row, col)) != undefined){
+            const diagonal = Math.abs(currRow - nextRow);
+            for (let rowOffset = 1; rowOffset < diagonal; rowOffset++) {
+                for (let colOffset = 1; colOffset < diagonal; colOffset++) {
+                    let row = currRow;
+                    let col = currCol;
+                    if (currRow < nextRow) {
+                        row += rowOffset;
+                    } else {
+                        row -= rowOffset;
+                    }
+                    if (currCol < nextCol) {
+                        col += colOffset;
+                    } else {
+                        col -= colOffset;
+                    }
+                    if (board.getPiece(Square.at(row, col)) != undefined) {
                         return true;
                     }
                 }
             }
+
+            return false;
         }
-        return false;
     }
 
     private static illegalMove(piece:Piece, pieceOnNextSquare: Piece): boolean{
@@ -74,9 +88,6 @@ export default class Moves {
             return true;
         }
         if(pieceOnNextSquare instanceof King){
-            return true;
-        }
-        if(piece instanceof Pawn){
             return true;
         }
         return false;

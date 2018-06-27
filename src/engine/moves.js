@@ -1,7 +1,6 @@
 import Square from "./square";
 import { default as Player } from "./player";
 import King from "./pieces/king";
-import Pawn from "./pieces/pawn";
 var Moves = /** @class */ (function () {
     function Moves() {
     }
@@ -56,24 +55,36 @@ var Moves = /** @class */ (function () {
             var currCol = currentSquare.col;
             var nextRow = nextSquare.row;
             var nextCol = nextSquare.col;
-            for (var row = Math.min(currRow, nextRow) + 1; row < Math.max(currRow, nextRow); row++) {
-                for (var col = Math.min(currCol, nextCol) + 1; col < Math.max(currCol, nextCol); col++) {
+            var diagonal = Math.abs(currRow - nextRow);
+            for (var rowOffset = 1; rowOffset < diagonal; rowOffset++) {
+                for (var colOffset = 1; colOffset < diagonal; colOffset++) {
+                    var row = currRow;
+                    var col = currCol;
+                    if (currRow < nextRow) {
+                        row += rowOffset;
+                    }
+                    else {
+                        row -= rowOffset;
+                    }
+                    if (currCol < nextCol) {
+                        col += colOffset;
+                    }
+                    else {
+                        col -= colOffset;
+                    }
                     if (board.getPiece(Square.at(row, col)) != undefined) {
                         return true;
                     }
                 }
             }
+            return false;
         }
-        return false;
     };
     Moves.illegalMove = function (piece, pieceOnNextSquare) {
         if (pieceOnNextSquare.player == piece.player) {
             return true;
         }
         if (pieceOnNextSquare instanceof King) {
-            return true;
-        }
-        if (piece instanceof Pawn) {
             return true;
         }
         return false;
