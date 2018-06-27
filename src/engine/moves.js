@@ -1,6 +1,7 @@
 import Square from "./square";
 import { default as Player } from "./player";
 import King from "./pieces/king";
+import Pawn from "./pieces/pawn";
 var Moves = /** @class */ (function () {
     function Moves() {
     }
@@ -70,6 +71,9 @@ var Moves = /** @class */ (function () {
             return true;
         }
         if (pieceOnNextSquare instanceof King) {
+            return true;
+        }
+        if (piece instanceof Pawn) {
             return true;
         }
         return false;
