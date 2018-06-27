@@ -5,8 +5,13 @@ import Square from "../square";
 import Move from "../move";
 import GameSettings from "../gameSettings";
 import Moves from "../moves";
+import Route from "./route";
 
 export default class Knight extends Piece {
+    public route: Route = {
+        cross: false,
+        diagonal: false
+    }
     constructor(player: PlayerType) {
         super(player);
     }

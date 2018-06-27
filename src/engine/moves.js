@@ -15,32 +15,47 @@ var Moves = /** @class */ (function () {
                 move = Square.relative(-movePattern.row, -movePattern.col, currentSquare);
             }
             if (move != undefined) {
-                if (!this.existPieceOnMoveRoute(board, currentSquare, move)) {
+                if (!this.existPieceOnMoveRoute(board, piece, currentSquare, move)) {
                     moves.push(move);
                 }
             }
         }
         return moves;
     };
-    Moves.existPieceOnMoveRoute = function (board, currentSquare, nextSquare) {
+    Moves.existPieceOnMoveRoute = function (board, piece, currentSquare, nextSquare) {
         if (board.getPiece(nextSquare) != undefined) {
             return true;
         }
-        var currRow = currentSquare.row;
-        var currCol = currentSquare.col;
-        var nextRow = nextSquare.row;
-        var nextCol = nextSquare.col;
-        if (currRow == nextRow) {
-            for (var col = Math.min(currCol, nextCol) + 1; col < Math.max(currCol, nextCol); col++) {
-                if (board.getPiece(Square.at(currRow, col)) != undefined) {
-                    return true;
+        if (piece.route.cross) {
+            var currRow = currentSquare.row;
+            var currCol = currentSquare.col;
+            var nextRow = nextSquare.row;
+            var nextCol = nextSquare.col;
+            if (currRow == nextRow) {
+                for (var col = Math.min(currCol, nextCol) + 1; col < Math.max(currCol, nextCol); col++) {
+                    if (board.getPiece(Square.at(currRow, col)) != undefined) {
+                        return true;
+                    }
+                }
+            }
+            if (currCol == nextCol) {
+                for (var row = Math.min(currRow, nextRow) + 1; row < Math.max(currRow, nextRow); row++) {
+                    if (board.getPiece(Square.at(row, currCol)) != undefined) {
+                        return true;
+                    }
                 }
             }
         }
-        if (currCol == nextCol) {
+        if (piece.route.diagonal) {
+            var currRow = currentSquare.row;
+            var currCol = currentSquare.col;
+            var nextRow = nextSquare.row;
+            var nextCol = nextSquare.col;
             for (var row = Math.min(currRow, nextRow) + 1; row < Math.max(currRow, nextRow); row++) {
-                if (board.getPiece(Square.at(row, currCol)) != undefined) {
-                    return true;
+                for (var col = Math.min(currCol, nextCol) + 1; col < Math.max(currCol, nextCol); col++) {
+                    if (board.getPiece(Square.at(row, col)) != undefined) {
+                        return true;
+                    }
                 }
             }
         }

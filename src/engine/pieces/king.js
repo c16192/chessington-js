@@ -14,7 +14,12 @@ import Moves from "../moves";
 var King = /** @class */ (function (_super) {
     __extends(King, _super);
     function King(player) {
-        return _super.call(this, player) || this;
+        var _this = _super.call(this, player) || this;
+        _this.route = {
+            cross: false,
+            diagonal: false
+        };
+        return _this;
     }
     King.prototype.getAvailableMoves = function (board) {
         var currentSquare = board.findPiece(this);

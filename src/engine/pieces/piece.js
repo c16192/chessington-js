@@ -1,6 +1,10 @@
 var Piece = /** @class */ (function () {
     function Piece(player) {
         this.player = player;
+        this.route = {
+            cross: false,
+            diagonal: false
+        };
     }
     Piece.prototype.getAvailableMoves = function (board) {
         throw new Error('This method must be implemented, and return a list of available moves');

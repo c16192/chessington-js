@@ -5,8 +5,14 @@ import Square from "../square";
 import Move from "../move";
 import GameSettings from "../gameSettings";
 import Moves from "../moves";
+import Route from "./route";
 
 export default class Queen extends Piece {
+    public route: Route = {
+        cross: true,
+        diagonal: true
+    }
+
     constructor(player: PlayerType) {
         super(player);
     }

@@ -1,9 +1,14 @@
-import {default as Player, PlayerType} from "../player";
+import {PlayerType} from "../player";
 import Board from "../board";
 import Square from "../square";
-import Move from "../move";
+import Route from "./route";
 
 export default class Piece {
+    public route: Route = {
+        cross: false,
+        diagonal: false
+    }
+
     constructor(public player: PlayerType){}
 
     public getAvailableMoves(board: Board): Square[] {

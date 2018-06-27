@@ -1,0 +1,1 @@
+export default interface Route { cross: boolean; diagonal: boolean };

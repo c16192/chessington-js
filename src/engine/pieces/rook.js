@@ -15,7 +15,12 @@ import Moves from "../moves";
 var Rook = /** @class */ (function (_super) {
     __extends(Rook, _super);
     function Rook(player) {
-        return _super.call(this, player) || this;
+        var _this = _super.call(this, player) || this;
+        _this.route = {
+            cross: true,
+            diagonal: false
+        };
+        return _this;
     }
     Rook.prototype.getAvailableMoves = function (board) {
         var currentSquare = board.findPiece(this);

@@ -16,6 +16,10 @@ var Pawn = /** @class */ (function (_super) {
     function Pawn(player) {
         var _this = _super.call(this, player) || this;
         _this.player = player;
+        _this.route = {
+            cross: true,
+            diagonal: false
+        };
         _this.hasMoved = false;
         return _this;
     }

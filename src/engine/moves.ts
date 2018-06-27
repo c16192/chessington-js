@@ -16,7 +16,7 @@ export default class Moves {
                 move = Square.relative(-movePattern.row,-movePattern.col,currentSquare);
             }
             if(move != undefined){
-                if(!this.existPieceOnMoveRoute(board, currentSquare, move)){
+                if(!this.existPieceOnMoveRoute(board, piece, currentSquare, move)){
                     moves.push(move);
                 }
             }
@@ -24,25 +24,40 @@ export default class Moves {
         return moves;
     }
 
-    public static existPieceOnMoveRoute(board: Board, currentSquare: Square, nextSquare: Square){
+    public static existPieceOnMoveRoute(board: Board, piece: Piece, currentSquare: Square, nextSquare: Square){
         if(board.getPiece(nextSquare) != undefined){
             return true;
         }
-        const currRow = currentSquare.row;
-        const currCol = currentSquare.col;
-        const nextRow = nextSquare.row;
-        const nextCol = nextSquare.col;
-        if(currRow == nextRow){
-            for(let col = Math.min(currCol, nextCol) + 1; col < Math.max(currCol, nextCol); col++){
-                if(board.getPiece(Square.at(currRow, col)) != undefined){
-                    return true;
+        if(piece.route.cross){
+            const currRow = currentSquare.row;
+            const currCol = currentSquare.col;
+            const nextRow = nextSquare.row;
+            const nextCol = nextSquare.col;
+            if(currRow == nextRow){
+                for(let col = Math.min(currCol, nextCol) + 1; col < Math.max(currCol, nextCol); col++){
+                    if(board.getPiece(Square.at(currRow, col)) != undefined){
+                        return true;
+                    }
+                }
+            }
+            if(currCol == nextCol){
+                for(let row = Math.min(currRow, nextRow) + 1; row < Math.max(currRow, nextRow); row++){
+                    if(board.getPiece(Square.at(row, currCol)) != undefined){
+                        return true;
+                    }
                 }
             }
         }
-        if(currCol == nextCol){
+        if(piece.route.diagonal){
+            const currRow = currentSquare.row;
+            const currCol = currentSquare.col;
+            const nextRow = nextSquare.row;
+            const nextCol = nextSquare.col;
             for(let row = Math.min(currRow, nextRow) + 1; row < Math.max(currRow, nextRow); row++){
-                if(board.getPiece(Square.at(row, currCol)) != undefined){
-                    return true;
+                for(let col = Math.min(currCol, nextCol) + 1; col < Math.max(currCol, nextCol); col++){
+                    if(board.getPiece(Square.at(row, col)) != undefined){
+                        return true;
+                    }
                 }
             }
         }

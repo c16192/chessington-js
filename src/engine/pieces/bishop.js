@@ -15,7 +15,12 @@ import Moves from "../moves";
 var Bishop = /** @class */ (function (_super) {
     __extends(Bishop, _super);
     function Bishop(player) {
-        return _super.call(this, player) || this;
+        var _this = _super.call(this, player) || this;
+        _this.route = {
+            cross: false,
+            diagonal: true
+        };
+        return _this;
     }
     Bishop.prototype.getAvailableMoves = function (board) {
         var currentSquare = board.findPiece(this);
