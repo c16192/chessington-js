@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d674a4b9-9a84-41eb-b90a-9f2781615ad7" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/engine/board.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/engine/board.js" afterDir="false" />
-    </list>
+    <list default="true" id="d674a4b9-9a84-41eb-b90a-9f2781615ad7" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -40,8 +38,8 @@
       <file leaf-file-name="board.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/engine/board.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="20" column="44" lean-forward="true" selection-start-line="20" selection-start-column="44" selection-end-line="20" selection-end-column="44" />
+            <state relative-caret-position="425">
+              <caret line="25" column="5" lean-forward="true" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
               <folding>
                 <element signature="e#0#30#0" expanded="true" />
               </folding>
@@ -96,18 +94,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="598">
               <caret line="41" column="11" selection-start-line="41" selection-start-column="11" selection-end-line="41" selection-end-column="11" />
-              <folding>
-                <element signature="e#0#30#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="board.spec.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tests/engine/board.spec.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="15" column="11" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
               <folding>
                 <element signature="e#0#30#0" expanded="true" />
               </folding>
@@ -207,6 +193,13 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="engine" type="462c0819:PsiDirectoryNode" />
               <item name="pieces" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="chessington-js" type="b2602c69:ProjectViewProjectNode" />
+              <item name="chessington-js" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="engine" type="462c0819:PsiDirectoryNode" />
+              <item name="board.ts" type="620a8d5e:NestingTreeNode" />
             </path>
             <path>
               <item name="chessington-js" type="b2602c69:ProjectViewProjectNode" />
@@ -332,7 +325,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1530026188193</updated>
-      <workItem from="1530026189777" duration="5014000" />
+      <workItem from="1530026189777" duration="5267000" />
     </task>
     <servers />
   </component>
@@ -363,7 +356,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5014000" />
+    <option name="totallyTimeSpent" value="5267000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1176" extended-state="6" />
@@ -379,11 +372,11 @@
       <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32851636" />
-      <window_info active="true" anchor="bottom" id="Terminal" visible="true" weight="0.19942197" />
+      <window_info anchor="bottom" id="Terminal" visible="true" weight="0.19942197" />
       <window_info id="Capture Tool" order="1" />
       <window_info anchor="bottom" id="TypeScript" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="6" visible="true" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="6" visible="true" weight="0.25" />
       <window_info anchor="right" id="Database" />
       <window_info id="Structure" order="5" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -519,13 +512,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/engine/board.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="7" column="5" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/engine/board.js.map">
       <provider editor-type-id="sourcemapFileViewerProvider" />
       <provider selected="true" editor-type-id="text-editor" />
@@ -628,16 +614,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/engine/board.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="44" lean-forward="true" selection-start-line="20" selection-start-column="44" selection-end-line="20" selection-end-column="44" />
-          <folding>
-            <element signature="e#0#30#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/engine/player.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -662,6 +638,23 @@
           <folding>
             <element signature="e#0#28#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/engine/board.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="5" lean-forward="true" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
+          <folding>
+            <element signature="e#0#30#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/engine/board.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="25" column="43" selection-start-line="25" selection-start-column="43" selection-end-line="25" selection-end-column="43" />
         </state>
       </provider>
     </entry>
